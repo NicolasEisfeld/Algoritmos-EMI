@@ -2,7 +2,7 @@
 import java.util.Scanner;
 // cria a classe "leitura1"
 public class leitura2 {
-    // expõe a variável que vai ser declarada
+   // acessa os códigos do programa para o arquivo .class
     public static void main(String[] args) {
         Scanner dado = new Scanner(System.in);
         // declara o tipo de variável de "valor" e insere o valor de entrada obtido pela variável "dado" na variável "valor"
