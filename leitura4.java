@@ -1,0 +1,36 @@
+// importa a função scanner do java
+import java.util.Scanner;
+// publica o programa em classe (.class)
+public class leitura4 {
+    // acessa os códigos do programa para o arquivo .class
+    public static void main(String args[]) {
+        // escaneia o valor do usuário e insere na variável "dado1"
+        Scanner dado1 = new Scanner(System.in);
+        // declara a variável "nota1" como o valor da váriavel "dado1" de leitura
+        double nota1 = dado1.nextDouble();
+        
+        // escaneia o valor do usuário e insere na variável "dado2"
+        Scanner dado2 = new Scanner(System.in);
+        // declara a variável "nota2" como o valor da váriavel "dado2" de leitura
+        double nota2 = dado2.nextDouble();
+        
+        // escaneia o valor do usuário e insere na variável "dado3"
+        Scanner dado3 = new Scanner(System.in);
+        // declara a variável "nota3" como o valor da váriavel "dado3" de leitura 
+        double nota3 = dado3.nextDouble();
+        
+        // declara a variável "soma" como sendo a soma das variáveis: "nota1", "nota2" e "nota3"
+        double soma = nota1 + nota2 + nota3;
+        // declara a váriavel "media" como sendo a variável "nota" dividido por 3
+        double media = soma / 3;
+        
+        // exibe na tela o valor da variável "soma" (soma das notas inseridas)
+        System.out.println(soma);
+        // exibe na tela o valor da variável "media" (média aritmédica das notas inseridas)
+        System.out.println(media);
+        
+    }
+}
+// Esse programa começa pedindo para inserir 3 notas de um aluno.
+// Após, é feito uma variável para a soma e a média aritmédica dessas notas
+// Por último, é exibido o valor da soma e a média aritmédica na tela 
