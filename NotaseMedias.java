@@ -1,5 +1,5 @@
-// cria a classe (.class) com o nome do arquivo ("NotaseMedias")
-public class NotaseMedias {
+// cria a classe (.class) com o nome do arquivo ("variaveis4")
+public class variaveis4 {
     // expõe a variável que vai ser declarada
     public static void main(String[] args) {
         // declara o tipo de variável (double) das variáveis "nota1", "nota2" e "nota3", e atribui um valor de entrada para cada variável
