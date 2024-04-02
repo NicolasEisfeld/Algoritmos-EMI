@@ -1,5 +1,5 @@
 // cria a classe (.class) com o nome do arquivo ("UsandoVariaveis1")
-public class UsandoVariaveis1 {
+public class variaveis1 {
  public static void main(String[] args) {
  // declara a variável
  int numero;
