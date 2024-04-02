@@ -1,5 +1,5 @@
 // cria a classe (.class) com o nome do arquivo ("Incrementando")
-public class Incrementando {
+public class variaveis2 {
  // expõe a variável que vai ser declarada
  public static void main(String[] args) {
  // declara o tipo da variável (int) e o valor de entrada (5) da variável dita ("valor")
