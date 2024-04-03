@@ -11,7 +11,7 @@ public class Notas {
     Scanner dado2 = new Scanner(System.in);
     double nota2 = dado2.nextDouble();
 
-    System.out.println("Nota 3: ");
+    System.out.print("Nota 3: ");
     Scanner dado3 = new Scanner(System.in);
     double nota3 = dado3.nextDouble();
 
@@ -19,11 +19,11 @@ public class Notas {
     System.out.print("Peso da 1 Nota: ");
     double peso1 = dado4.nextDouble();
 
-    System.out.println("Peso da 2 Nota: ");
+    System.out.print("Peso da 2 Nota: ");
     Scanner dado5 = new Scanner(System.in);
     double peso2 = dado5.nextDouble();
 
-    System.out.println("Peso da Nota 3: ");
+    System.out.print("Peso da Nota 3: ");
     Scanner dado6 = new Scanner(System.in);
     double peso3 = dado6.nextDouble();
 
