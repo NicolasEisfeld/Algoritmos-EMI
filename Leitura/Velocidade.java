@@ -7,6 +7,8 @@ public class Velocidade {
   double duracao_horas = leitura1.nextDouble():
 
   Scanner leitura2 = new Scanner(System.in);
+  System.out.println("Primeiro abastecimento: ")
   double abastecer1 = leitura2.nextDouble();
+  System.out.println("Segunda abasteimento: ")
   double abastecer2 = leitura2.nextDouble();
   
