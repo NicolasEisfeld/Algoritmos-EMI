@@ -28,7 +28,7 @@ public class Notas {
     double peso3 = dado6.nextDouble();
 
     double soma_nota = nota1 + nota2 + nota3;
-    double media_arit = soma / 3;
+    double media_arit = soma_nota / 3;
 
     double notaXpeso = (nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3);
     double soma_peso = peso1 + peso2 + peso3;
