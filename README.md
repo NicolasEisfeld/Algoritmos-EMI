@@ -4,4 +4,5 @@ Exercícios e Conteúdos sobre a Matéria de Lógica de Programação e Algoritm
 - Variáveis
 - Leitura (Scanner)
 - Condições (If/Else)
+- Repetições (Loops)
 ### Linguagens: Java👍
