@@ -17,3 +17,4 @@
 - Minimo
 - MaximoMinimo
 - DecomposicaoStringEmChar
+Autoria de Alexandro Adário (alexandro.adario@erechim.ifrs.edu.br)
