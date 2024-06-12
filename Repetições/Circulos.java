@@ -9,8 +9,8 @@ public class Circulos {
         double diametro = raio * 2;
         double perimetro = diametro * Math.PI;
         double area = Math.pow(raio, 2) * Math.PI;
-        double volume = 4 / 3 * Math.PI * Math.pow(raio, 3);
-        double superficie = (Math.PI * 4) * Math.pow(raio, 2);
+        double volume = (4 * Math.PI * Math.pow(raio, 3)) / 3;
+        double superficie = Math.PI * 4 * Math.pow(raio, 2);
         
         System.out.println(diametro);
         System.out.println(perimetro);
