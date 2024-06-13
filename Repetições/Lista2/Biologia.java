@@ -7,12 +7,6 @@ public class Biologia {
         int classe = dado.nextInt();
         System.out.println("Me informe se a alimentacao do animal eh \n herbivoros (1) \n ou carnivoros (2): ");
         int alimento = dado.nextInt();
-        for(int i=0; i<3; i++) {
-            if (soma == classe) {
-                
-            }
-            soma++;
-        }
         switch (classe) {
             case 1:
                     if(alimento == 1) {
