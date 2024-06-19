@@ -44,7 +44,10 @@ public class Analise_CPF {
         }
         
         // System.out.println(CPF.replaceAll("(\\d{3})(\\d{3})(\\d{3})(\\d{2})", "$1.$2.$3-$4"));
-        System.out.println(CPF.substring(0, 3) + "." + CPF.substring(3, 6) + "." + CPF.substring(6, 9) + "-" + CPF.substring(9, 11));
+        System.out.println(CPF.substring(0, 3) 
+                + "." + CPF.substring(3, 6) 
+                + "." + CPF.substring(6, 9) 
+                + "-" + CPF.substring(9, 11));
         System.out.println(CPF);
         
         
