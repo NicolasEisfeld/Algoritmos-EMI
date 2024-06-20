@@ -15,10 +15,14 @@ public class Media_Elementos {
         for(int i=0; i < num.length; i++) {
             System.out.println( num[i]);
             media = media + num[i];
+            
+        }
+        for(int i=0; i< num.length; i++) {
             if(num[i] >= media) {
                 cont++;
             }
         }
+            
         media = media / num.length;
         System.out.println(cont);
         System.out.println(media);
