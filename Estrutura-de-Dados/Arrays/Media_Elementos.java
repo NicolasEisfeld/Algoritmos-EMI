@@ -14,12 +14,12 @@ public class Media_Elementos {
         
         for(int i=0; i < num.length; i++) {
             System.out.println( num[i]);
-            media = num[i] / num.length;
+            media = media + num[i];
             if(num[i] >= media) {
                 cont++;
             }
         }
-        
+        media = media / num.length;
         System.out.println(cont);
         System.out.println(media);
     }
