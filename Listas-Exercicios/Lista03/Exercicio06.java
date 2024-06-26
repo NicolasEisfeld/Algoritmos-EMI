@@ -6,19 +6,21 @@ package lista03.nicolas;
     Essa alga duplica a cada 5 dias. Se não for feito nada para removê-la, em quantos dias ela irá cobrir todo o lago?
 
 */
+
 public class Exercicio06 {
     public static void main(String [] args) {
-        int i = 0;
+        int i = 20;
         int cont = 0, dias = 0;
         while(i < 5000000) {
             cont++;
             dias++;
             if(cont == 5) {
-                i = i + 20;
+                i += i;
                 cont = 0;
             }
             
         }
         System.out.println(dias);
+        System.out.println(i);
     }
 }
