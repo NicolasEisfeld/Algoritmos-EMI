@@ -12,22 +12,32 @@ import java.util.Scanner;
 public class Exercicio12 {
     public static void main(String [] args) {
         Scanner dado = new Scanner(System.in);
-        String palavra = "";
-        String todas_palavras = "";
-        int tamanho = todas_palavras.length();
+    
+        while(true) {
+            String palavra = dado.nextLine().toLowerCase();
         
-        boolean encerrar = false;
-        while(encerrar == false) {
-            palavra = dado.nextLine();
-            todas_palavras += palavra;
-            tamanho += todas_palavras.length();
-            encerrar = palavra.equalsIgnoreCase("tchau");           
-            
+            if(palavra.equals("tchau")) {
+                break;
+
+            }            
+
+            for(int i=0; i<palavra.length(); i++) {
+                char caractere = palavra.charAt(i);
+                
+                
+                if(caractere == 'a' || caractere == 'e' || caractere == 'i' 
+                || caractere == 'o' || caractere == 'u') {
+                    System.out.println(caractere + "- vogal");
+                } else {
+                    if (Character.isWhitespace(caractere)) {
+                        System.out.println(caractere + "- caractere em branco");
+                    } else {System.out.println(caractere + "- consoante");}                  
+                } 
+                
+
+                
+            }
         }
-        todas_palavras = todas_palavras.toLowerCase();
-        for(int i=0; i<tamanho; i++) {
-            Character caractere = todas_palavras.charAt(i);
-            System.out.println(caractere);
-        }
+        
     }
 }
