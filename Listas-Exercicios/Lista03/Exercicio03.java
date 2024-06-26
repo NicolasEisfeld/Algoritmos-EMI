@@ -1,3 +1,5 @@
+package lista03.nicolas;
+
 /* 
     Você deve escrever um programa que exiba uma saída como aparece no exemplo abaixo.
         I=0 J=1
@@ -12,22 +14,13 @@
         I=2 J=?
 
 */
-package lista03.nicolas;
 
 public class Exercicio03 {
     public static void main(String [] args) {
-        for(double i=0; i<=2; i=i+0.2) {         
-            System.out.println(i);
-            System.out.println(i);
-            System.out.println(i);
-        }
-        System.out.println("");
-        for(double j=1; j<=6; j=j+0.2) {
-            System.out.println(j);
-            System.out.println(j+1);
-            System.out.println(j+2);
-            
-            
+        for(double i=0; i<=2; i+=0.2) {
+            for(double j=1+i; j<=3+i; j+=1.0) {
+                System.out.println("I="+ i + "J=" + j)
+            }
         }
     }
 }
