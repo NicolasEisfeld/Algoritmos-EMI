@@ -36,6 +36,8 @@ public class Alunos {
         
         double media_geral = (media_prova[0] + media_prova[1]) / 2.0;
         System.out.println(media_geral);
+        // fazer minima, maxima das medias
+        // fazer '' por prova
         
     }
 }
