@@ -13,6 +13,8 @@ public class alunos {
         double max_prova[] = new double[2];
         double min_media = media_aluno[0];
         double max_media = media_aluno[0];
+        int cont_aprovado = 0;
+        int cont_mediageral = 0;
         
         for(int k=0; k < max_prova.length; k++) {
             max_prova[k] = notas[0][k];
@@ -37,12 +39,18 @@ public class alunos {
                 
             }
             media_aluno[i] /= 2.0;
+            if(media_aluno[i] >= 7) {
+                cont_aprovado++;
+            }
+            
             if(media_aluno[i] < min_media) {
                 min_media = media_aluno[i];
             }
             else if(media_aluno[i] > max_media) {
                 max_media = media_aluno[i];
             }            
+            
+            
             
             System.out.println(media_aluno[i]);
             
@@ -59,11 +67,19 @@ public class alunos {
 
         
         double media_geral = (media_prova[0] + media_prova[1]) / 2.0;
+        for(int n=1; n<10; n++) {
+            
+            if(media_aluno[n] >= media_geral){
+                cont_mediageral++;
+            }
+        }
         System.out.println(media_geral);
         System.out.println(min_media);
         System.out.println(max_media);
         System.out.println(min_prova);
         System.out.println(max_prova);
+        System.out.println(cont_aprovado);
+        System.out.println(cont_mediageral);
         
     }
 }
