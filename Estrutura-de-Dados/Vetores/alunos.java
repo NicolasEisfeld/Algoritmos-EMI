@@ -27,7 +27,7 @@ public class Alunos {
             if(media_aluno[i] < min_media) {
                 min_media = media_aluno[i];
             }
-            if(notas[i][j] > max_media) {
+            if(media_aluno[i] > max_media) {
                 max_media = media_aluno[i];
             }            
             
