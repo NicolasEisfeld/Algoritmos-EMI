@@ -9,26 +9,29 @@ public class alunos {
         double notas[][] = new double[10][2];
         double media_aluno[] = new double[10];
         double media_prova[] = new double[2];
-        double min_prova = notas[0][0];
-        double max_prova = notas[0][0];
+        double min_prova[] = new double[2];
+        double max_prova[] = new double[2];
         double min_media = media_aluno[0];
         double max_media = media_aluno[0];
         
+        for(int k=0; k < max_prova.length; k++) {
+            max_prova[k] = notas[0][k];
+            min_prova[k] = notas[0][k];
+        }
         for(int i=0; i<10; i++) {
             nomes[i] = dado.nextLine();
             System.out.println("Notas de " + nomes[i]);
             for(int j=0; j < 2; j++) {
                 notas[i][j] = dado.nextDouble();
-                if(media_prova[0] == media_prova[1]) {}
-                else {
-                    if(notas[i][1] > notas[i][2]) {
-                        max_prova = notas[i][1];
-                        min_prova = notas[i][2];
-                } else {
-                    max_prova = notas[i][2];
-                    min_prova = notas[i][2];
-            }
-        }
+                if(max_prova[j] < notas[i][j]) {
+                    max_prova[j] = notas[i][j];
+                    
+                } else{
+                    if(min_prova[j] > notas[i][j]) {
+                        min_prova[j] = notas[i][j];
+                    }
+                }
+                
                 media_aluno[i] += notas[i][j];                
                 media_prova[j] += notas[i][j];
                 
