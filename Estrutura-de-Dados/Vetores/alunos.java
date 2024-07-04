@@ -1,7 +1,7 @@
 package Vetores;
 
 import java.util.Scanner;
-public class Alunos {
+public class alunos {
     public static void main(String [] args) {
         Scanner dado = new Scanner(System.in);
         
@@ -9,16 +9,26 @@ public class Alunos {
         double notas[][] = new double[10][2];
         double media_aluno[] = new double[10];
         double media_prova[] = new double[2];
-        double min_prova = 0;
-        double max_prova = 0;
-        double min_media = Integer.MAX_VALUE;
-        double max_media = Integer.MIN_VALUE;
+        double min_prova = notas[0][0];
+        double max_prova = notas[0][0];
+        double min_media = media_aluno[0];
+        double max_media = media_aluno[0];
         
         for(int i=0; i<10; i++) {
             nomes[i] = dado.nextLine();
             System.out.println("Notas de " + nomes[i]);
             for(int j=0; j < 2; j++) {
                 notas[i][j] = dado.nextDouble();
+                if(media_prova[0] == media_prova[1]) {}
+                else {
+                    if(notas[i][1] > notas[i][2]) {
+                        max_prova = notas[i][1];
+                        min_prova = notas[i][2];
+                } else {
+                    max_prova = notas[i][2];
+                    min_prova = notas[i][2];
+            }
+        }
                 media_aluno[i] += notas[i][j];                
                 media_prova[j] += notas[i][j];
                 
@@ -27,7 +37,7 @@ public class Alunos {
             if(media_aluno[i] < min_media) {
                 min_media = media_aluno[i];
             }
-            if(media_aluno[i] > max_media) {
+            else if(media_aluno[i] > max_media) {
                 max_media = media_aluno[i];
             }            
             
@@ -43,16 +53,7 @@ public class Alunos {
         System.out.println(media_prova[0]);
         media_prova[1] /= 10.0;
         System.out.println(media_prova[1]);
-        if(media_prova[0] == media_prova[1]) {}
-        else {
-            if(media_prova[0] > media_prova[1]) {
-                max_prova = media_prova[0];
-                min_prova = media_prova[1];
-            } else {
-                max_prova = media_prova[1];
-                min_prova = media_prova[0];
-            }
-        }
+
         
         double media_geral = (media_prova[0] + media_prova[1]) / 2.0;
         System.out.println(media_geral);
