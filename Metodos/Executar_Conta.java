@@ -13,6 +13,13 @@ public class Executar_Conta {
         System.out.println("Saldo: " + MyConta.saque(34.0));
         System.out.println(MyConta.saque(34.0));
         System.out.println("Saldo: " + MyConta.getSaldo());
+        
+        System.out.println(Conta.getQuantContas());
+        
+        Conta Conta02 = new Conta();
+        Conta Conta03 = new Conta();
+        
+        System.out.println(Conta.getQuantContas());
     }
     
 }

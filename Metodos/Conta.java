@@ -5,7 +5,18 @@ package Metodos;
 */
 public class Conta {
     // Atributo
+    
+    private static int quantContas = 0;
+    
     private double saldo;
+    
+    public Conta() {
+        quantContas++;
+    }
+    
+    public static int getQuantContas() {
+        return quantContas;
+    }
     /*
     Metodo: saque
     Parametro/Argumentos: valor (dado de entrada)
