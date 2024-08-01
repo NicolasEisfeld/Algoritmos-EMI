@@ -5,4 +5,6 @@ Exercícios e Conteúdos sobre a Matéria de Lógica de Programação e Algoritm
 - Leitura (Scanner)
 - Condições (If/Else)
 - Repetições (Loops)
+- Estrutura de Dados (Arrays, Listas, entre outros)
+- Métodos e Rotinas
 ### Linguagens: Java👍
