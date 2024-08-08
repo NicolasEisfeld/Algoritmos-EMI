@@ -14,16 +14,18 @@ public class Exercicio3 {
     public static void main(String[] args) {
         Scanner dado = new Scanner(System.in);
         int numeros[] = new int [10];
-        for(int i: numeros) {
+        for(int i = 0; i < numeros.length; i++) {
             numeros[i] = dado.nextInt();
         }
         int O_Escolhido = dado.nextInt();
-        for(int i: numeros) {
-            System.out.println(numeros[i]);
+        for(int i = 0; i < numeros.length; i++) {
+
             if(numeros[i] == O_Escolhido) {
-                System.out.println("Possui esse valor no vetor");
+                
+                System.out.println("Possui o valor "+ numeros[i] +" no vetor na posicao: " + i);
             }
         }
+        
     }
     
 }
