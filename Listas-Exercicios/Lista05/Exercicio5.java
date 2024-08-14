@@ -14,7 +14,7 @@ public class Exercicio5 {
             Valores[i] = dado.nextInt();
         }
         for(int i = 0; i < Valores.length; i++) {
-            if(i < 9 && Valores[i] == Valores[i+1]) {
+            if(i > 0 && Valores[i] == Valores[i-1]) {
                 System.out.println("Duplicata achada");
             }
         }    
