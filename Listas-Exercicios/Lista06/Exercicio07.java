@@ -8,7 +8,7 @@ package Lista_Subrotinas;
 
 import java.util.Scanner;
 
-public class Exercicio7 {
+public class Exercicio07 {
 
     public static void main(String[] args) {
         Scanner dado = new Scanner(System.in);
