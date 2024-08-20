@@ -9,7 +9,7 @@ package Lista_Subrotinas;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Exercicio3 {
+public class Exercicio03 {
     public static void main(String [] args) {
         Scanner dado = new Scanner(System.in);
         double Valores[] = new double[50];
