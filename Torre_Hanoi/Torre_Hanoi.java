@@ -18,6 +18,12 @@ public class Torre_Hanoi {
         int N_Discos = dado.nextInt(); // Quantidade de Discos
         double N_Minimo = Math.pow(2, N_Discos) - 1;
         System.out.println(N_Minimo); // Exibir número mínimo de jogadas
+        Stack<Integer> Origem = new Stack();
+        for(int i = N_Discos; i > 0; i--) { //Inserir todos os discos na haste de Origem
+            Origem.push(i);
+        }
+        Stack<Integer> Auxiliar = new Stack();
+        Stack<Integer> Destino = new Stack();
         
     }
     
