@@ -10,16 +10,23 @@ public class zero {
         Scanner dado = new Scanner(System.in);
         int N = dado.nextInt(), soma = 0;
         Stack< Integer > Valores = new Stack();
+        
         for(int i = 0; i < N; i++) {
-           Valores.push(dado.nextInt());
+           int valor = dado.nextInt();
+           if(valor != 0) {
+                Valores.push(valor);
+           } else {
+               Valores.pop();
+           }
+           
         }
-        for(int i = 0; i < N; i++) {
-            if(Valores.push(i) == 0) {
-                Valores.pop();
-            } 
-            soma += Valores.push(i);
-            
+        
+        while( ! Valores.isEmpty()) {
+            int valor = Valores.pop();
+            soma += valor;
         }
+        
+
         System.out.println(soma);
     }
     
