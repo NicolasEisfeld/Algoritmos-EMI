@@ -1,6 +1,5 @@
 
 import java.util.Scanner;
-import java.util.Stack;
 
 /* Autor: Nicolas Eisfeld Ferreira
 https://github.com/NicolasEisfeld/ */
@@ -12,19 +11,22 @@ https://github.com/NicolasEisfeld/ */
 */
 
 public class Torre_Hanoi {
-
+    
     public static void main(String[] args) {
         Scanner dado = new Scanner(System.in);
         int N_Discos = dado.nextInt(); // Quantidade de Discos
         double N_Minimo = Math.pow(2, N_Discos) - 1;
         System.out.println(N_Minimo); // Exibir número mínimo de jogadas
-        Stack<Integer> Origem = new Stack();
-        for(int i = N_Discos; i > 0; i--) { //Inserir todos os discos na haste de Origem
-            Origem.push(i);
-        }
-        Stack<Integer> Auxiliar = new Stack();
-        Stack<Integer> Destino = new Stack();
+        Hanoi(N_Discos, "T1", "T2", "T3"); // Chama o método recursivo
+        System.out.println(movimento); // Exibe o return do método
         
+    }
+    public static Hanoi (int Discos, String Origem, String Auxiliar, String Destino) {
+        if (Discos > 0) { // Solução através da recursividade 
+            Hanoi(Discos-1, Origem, Destino, Auxiliar); // Os movimentos da origem para auxiliar (n-1)
+            System.out.println("Mover Disco "+ Discos + " de " + Origem + "para " + Destino);
+            Hanoi(Discos-1, Auxiliar, Origem, Destino); // Os movimentos do auxiliar para o destino (n-1)
+        }
     }
     
 }
