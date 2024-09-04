@@ -14,9 +14,10 @@ public class Torre_Hanoi {
     
     public static void main(String[] args) {
         Scanner dado = new Scanner(System.in);
-        int Discos = dado.nextInt(); // Quantidade de Discos
+        int Discos = dado.nextInt(); // Quantidade de Discos (Entrada: 0 < Discos)
         double N_Minimo = Math.pow(2, Discos) - 1;
-        System.out.println("O numero minimo de jogadas possiveis eh: " + N_Minimo); // Exibir número mínimo de jogadas
+        System.out.println("O numero minimo de jogadas possiveis eh: " + (int)N_Minimo); // Exibir número mínimo de jogadas
+        System.out.println("Sequencia da solucao com " + Discos+" Discos: ");
         Hanoi(Discos, "T1", "T2", "T3"); // Chama o método recursivo
         
     }
