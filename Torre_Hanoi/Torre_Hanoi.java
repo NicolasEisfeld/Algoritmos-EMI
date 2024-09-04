@@ -16,12 +16,15 @@ public class Torre_Hanoi {
         Scanner dado = new Scanner(System.in);
         int Discos = dado.nextInt(); // Quantidade de Discos
         double N_Minimo = Math.pow(2, Discos) - 1;
-        System.out.println("O numero minimo de jogadas possíveis eh: " + N_Minimo); // Exibir número mínimo de jogadas
+        System.out.println("O numero minimo de jogadas possiveis eh: " + N_Minimo); // Exibir número mínimo de jogadas
         Hanoi(Discos, "T1", "T2", "T3"); // Chama o método recursivo
         
     }
     public static void Hanoi (int Discos, String Origem, String Auxiliar, String Destino) {
-        if (Discos == 1) {System.out.println("Mover Disco "+ Discos + " de " + Origem + " para " + Destino) ; return;}
+        if (Discos == 1) {
+            System.out.println("Mover Disco "+ Discos + " de " + Origem + " para " + Destino); 
+            return;
+        }
         // Solução através da recursividade 
         Hanoi(Discos-1, Origem, Destino, Auxiliar); // Os movimentos da origem para auxiliar (n-1)
         System.out.println("Mover Disco "+ Discos + " de " + Origem + " para " + Destino);
