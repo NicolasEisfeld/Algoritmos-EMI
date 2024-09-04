@@ -21,7 +21,7 @@ public class Torre_Hanoi {
         Hanoi(Discos, "T1", "T2", "T3"); // Chama o método recursivo
         
     }
-    public static void Hanoi (int Discos, String Origem, String Auxiliar, String Destino) {
+    public static void Hanoi (int Discos, String Origem, String Auxiliar, String Destino) { // Solução através da recursividade 
         if (Discos > 1) {
         Hanoi(Discos-1, Origem, Destino, Auxiliar); // Os movimentos da origem para auxiliar (n-1)
         System.out.println("Mover Disco "+ Discos + " de " + Origem + " para " + Destino);
@@ -34,9 +34,7 @@ public class Torre_Hanoi {
             System.out.println("Valor Invalido"); 
             return;
         }
-        // Solução através da recursividade 
-        
-        
+
     }
     
 }
