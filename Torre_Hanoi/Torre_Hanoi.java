@@ -22,14 +22,20 @@ public class Torre_Hanoi {
         
     }
     public static void Hanoi (int Discos, String Origem, String Auxiliar, String Destino) {
-        if (Discos == 1) {
-            System.out.println("Mover Disco "+ Discos + " de " + Origem + " para " + Destino); 
-            return;
-        }
-        // Solução através da recursividade 
+        if (Discos > 1) {
         Hanoi(Discos-1, Origem, Destino, Auxiliar); // Os movimentos da origem para auxiliar (n-1)
         System.out.println("Mover Disco "+ Discos + " de " + Origem + " para " + Destino);
         Hanoi(Discos-1, Auxiliar, Origem, Destino); // Os movimentos do auxiliar para o destino (n-1)
+        }
+        else if (Discos == 1) {
+            System.out.println("Mover Disco "+ Discos + " de " + Origem + " para " + Destino); 
+            return;
+        } else { // Não é possível ter discos negativos, assim o código deve ser encerrado
+            System.out.println("Valor Invalido"); 
+            return;
+        }
+        // Solução através da recursividade 
+        
         
     }
     
