@@ -1,5 +1,5 @@
 ## Principais Algoritmos de ordenações
 - Bubble Sort
-- SFL
-- INS
-- MER
+- Selection Sort
+- Insertion Sort
+- Quick Sort
