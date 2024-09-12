@@ -1,4 +1,4 @@
-## Principais Algoritmos de ordenações
+## Algoritmos de Ordenações
 ### Ordenações Simples
 - Bubble Sort
 - Selection Sort
