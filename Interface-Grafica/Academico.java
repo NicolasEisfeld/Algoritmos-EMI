@@ -6,9 +6,9 @@
 
 /**
  *
- * @author 05138300067
+ * @author 03721174062
  */
-public class Janela extends javax.swing.JFrame {
+public class Academico extends javax.swing.JFrame {
 
     /**
      * Creates new form Janela
