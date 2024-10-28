@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Interface_Gráfica;
+
 
 /**
  *
- * @author 03721174062
+ * @author 05138300067
  */
 public class Janela extends javax.swing.JFrame {
 
@@ -26,14 +26,94 @@ public class Janela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        lNotas = new javax.swing.JLabel();
+        ctN3 = new javax.swing.JTextField();
+        ctN2 = new javax.swing.JTextField();
+        lSoma = new javax.swing.JLabel();
+        ctN1 = new javax.swing.JTextField();
+        lMedAnual = new javax.swing.JLabel();
+        lResultSoma = new javax.swing.JLabel();
+        lResultMediaAnu = new javax.swing.JLabel();
+        lSitu = new javax.swing.JLabel();
+        lResultSitu = new javax.swing.JLabel();
+        lMinExame = new javax.swing.JLabel();
+        lResultMinExame = new javax.swing.JLabel();
+        lNotExame = new javax.swing.JLabel();
+        ctNotExame = new javax.swing.JTextField();
+        lMedFin = new javax.swing.JLabel();
+        lResultMedFin = new javax.swing.JLabel();
+        btLimpar = new javax.swing.JButton();
+        ctCalc = new javax.swing.JButton();
+        ctSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Botão 1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        lNotas.setText("Notas:");
+
+        ctN3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ctN3ActionPerformed(evt);
+            }
+        });
+
+        ctN2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ctN2ActionPerformed(evt);
+            }
+        });
+
+        lSoma.setText("Soma:");
+
+        ctN1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ctN1ActionPerformed(evt);
+            }
+        });
+
+        lMedAnual.setText("Média Anual:");
+
+        lResultSoma.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+
+        lResultMediaAnu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+
+        lSitu.setText("Situação");
+
+        lResultSitu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+
+        lMinExame.setText("Miniimo Exame:");
+
+        lResultMinExame.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+
+        lNotExame.setText("Nota Exame:");
+
+        ctNotExame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ctNotExameActionPerformed(evt);
+            }
+        });
+
+        lMedFin.setText("Média Final");
+
+        lResultMedFin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+
+        btLimpar.setText("Limpar");
+        btLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLimparActionPerformed(evt);
+            }
+        });
+
+        ctCalc.setText("Calcular");
+        ctCalc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ctCalcActionPerformed(evt);
+            }
+        });
+
+        ctSair.setText("Sair");
+        ctSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ctSairActionPerformed(evt);
             }
         });
 
@@ -42,24 +122,165 @@ public class Janela extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jButton1)
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lSoma)
+                                .addComponent(lNotas))
+                            .addGap(55, 55, 55)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(ctN1, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                                .addComponent(lResultSoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lMedAnual)
+                                .addComponent(lSitu)
+                                .addComponent(lNotExame))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ctNotExame)
+                                .addComponent(lResultMediaAnu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lResultSitu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lResultMinExame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lResultMedFin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(lMinExame)
+                    .addComponent(lMedFin))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(ctN2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ctN3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(ctSair, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ctCalc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                        .addComponent(btLimpar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jButton1)
-                .addContainerGap(220, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lNotas)
+                    .addComponent(ctN3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ctN2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ctN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lSoma)
+                    .addComponent(lResultSoma, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lMedAnual)
+                    .addComponent(lResultMediaAnu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lSitu)
+                    .addComponent(lResultSitu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lMinExame)
+                        .addComponent(lResultMinExame, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btLimpar))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lNotExame)
+                    .addComponent(ctNotExame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ctCalc))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lMedFin)
+                    .addComponent(lResultMedFin, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ctSair))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ctN3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctN3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ctN3ActionPerformed
+
+    private void ctN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctN2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ctN2ActionPerformed
+
+    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
+        ctN1.setText("");
+        ctN2.setText("");
+        ctN3.setText("");
+        lResultSoma.setText("");
+        lResultMediaAnu.setText("");
+        lResultSitu.setText("");
+        lResultMinExame.setText("");
+        lResultMedFin.setText("");
+        ctNotExame.setText("");
+    }//GEN-LAST:event_btLimparActionPerformed
+
+    private void ctCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctCalcActionPerformed
+        String nota1 = ctN1.getText();
+        double valorN1 = Double.parseDouble(nota1);
+        
+        String nota2 = ctN2.getText();
+        double valorN2 = Double.parseDouble(nota2);
+        
+        String nota3 = ctN3.getText();
+        double valorN3 = Double.parseDouble(nota3);
+        
+        double soma = valorN1 + valorN2 + valorN3;
+        String resultS = String.valueOf(soma);
+        lResultSoma.setText(resultS);
+        
+        double media = (valorN1 + valorN2 + valorN3) / 3;
+        String resultMedA = String.valueOf(media);
+        lResultMediaAnu.setText(resultMedA);
+        
+        if(media >= 7.0 ) {
+            lResultSitu.setText("Aprovado!");
+        } else {
+            if (media < 7.0 || media >= 1.8) {
+                lResultSitu.setText("Em Exame!");
+            } else {
+                if (media <= 1.7)
+                lResultSitu.setText("Reprovado!");
+            }
+        }
+        if("Reprovado!".equals(lResultSitu.getText()) || "Em Exame!".equals(lResultSitu.getText())) {
+            double minExam = (5.0 - 0.6 * media) / 0.4;
+            String minExamS = String.valueOf(minExam);
+            lResultMinExame.setText(String.format(minExamS, "%.2f"));
+            
+            if(!"".equals(ctNotExame.getText())) {
+                String notaEx = ctNotExame.getText();
+                double notaExame = Double.parseDouble(notaEx);
+
+                double mediaFinal = media * 0.6 + notaExame * 0.4;
+                String MedFin = String.valueOf(mediaFinal);
+
+                lResultMedFin.setText(String.format(MedFin, "%.2f"));
+            } 
+            
+        }
+    }//GEN-LAST:event_ctCalcActionPerformed
+
+    private void ctSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctSairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ctSairActionPerformed
+
+    private void ctN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctN1ActionPerformed
+
+        
+        
+    }//GEN-LAST:event_ctN1ActionPerformed
+
+    private void ctNotExameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctNotExameActionPerformed
+        
+    }//GEN-LAST:event_ctNotExameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,6 +318,24 @@ public class Janela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btLimpar;
+    private javax.swing.JButton ctCalc;
+    private javax.swing.JTextField ctN1;
+    private javax.swing.JTextField ctN2;
+    private javax.swing.JTextField ctN3;
+    private javax.swing.JTextField ctNotExame;
+    private javax.swing.JButton ctSair;
+    private javax.swing.JLabel lMedAnual;
+    private javax.swing.JLabel lMedFin;
+    private javax.swing.JLabel lMinExame;
+    private javax.swing.JLabel lNotExame;
+    private javax.swing.JLabel lNotas;
+    private javax.swing.JLabel lResultMedFin;
+    private javax.swing.JLabel lResultMediaAnu;
+    private javax.swing.JLabel lResultMinExame;
+    private javax.swing.JLabel lResultSitu;
+    private javax.swing.JLabel lResultSoma;
+    private javax.swing.JLabel lSitu;
+    private javax.swing.JLabel lSoma;
     // End of variables declaration//GEN-END:variables
 }
