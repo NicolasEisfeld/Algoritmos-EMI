@@ -13,7 +13,7 @@ public class Academico extends javax.swing.JFrame {
     /**
      * Creates new form Janela
      */
-    public Janela() {
+    public Academico() {
         initComponents();
     }
 
