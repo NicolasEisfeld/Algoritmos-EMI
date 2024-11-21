@@ -31,7 +31,7 @@ public class Conv_Temp extends javax.swing.JFrame {
     }
     
     private static int celsiusParaFahrenheit(int tCelsius) {
-        double temp = (tFahr - 5.0) * 9 + 32; 
+        double temp = (tCelsius / 5.0) * 9 + 32; 
         return (int) temp;
     }
     
@@ -134,6 +134,11 @@ public class Conv_Temp extends javax.swing.JFrame {
         rbCelsiusO.setFont(new java.awt.Font("Monocraft", 0, 12)); // NOI18N
         rbCelsiusO.setSelected(true);
         rbCelsiusO.setText("Celsius");
+        rbCelsiusO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbCelsiusOActionPerformed(evt);
+            }
+        });
 
         grupoOrigem.add(rbKelvinO);
         rbKelvinO.setFont(new java.awt.Font("Monocraft", 0, 12)); // NOI18N
@@ -147,6 +152,11 @@ public class Conv_Temp extends javax.swing.JFrame {
         grupoOrigem.add(rbFahrO);
         rbFahrO.setFont(new java.awt.Font("Monocraft", 0, 12)); // NOI18N
         rbFahrO.setText("Fahrenheit");
+        rbFahrO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbFahrOActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pOrigemLayout = new javax.swing.GroupLayout(pOrigem);
         pOrigem.setLayout(pOrigemLayout);
@@ -174,6 +184,11 @@ public class Conv_Temp extends javax.swing.JFrame {
 
         botReiniciar.setFont(new java.awt.Font("Monocraft", 1, 14)); // NOI18N
         botReiniciar.setText("Reiniciar");
+        botReiniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botReiniciarActionPerformed(evt);
+            }
+        });
 
         botSair.setFont(new java.awt.Font("Monocraft", 1, 14)); // NOI18N
         botSair.setText("Sair");
@@ -248,21 +263,129 @@ public class Conv_Temp extends javax.swing.JFrame {
         int valor = sliOrigem.getValue();
         String texto = String.valueOf(valor);
         LOrigem.setText(texto);
+        int valorConv;
+        if( rbCelsiusO.isSelected()) {
+            if(rbKelvinD.isSelected()) {
+                valorConv = celsiusParaKelvin(valor);
+            } else {
+                valorConv = celsiusParaFahrenheit(valor);
+            }
+        } else {
+            if(rbKelvinO.isSelected()) {
+                if(rbCelsiusD.isSelected()) {
+                    valorConv = kelvinParaCelsius(valor);
+                } else {
+                    valorConv = kelvinParaFahrenheit(valor);
+                }
+            } else { // selecionado o Fahr
+                if(rbCelsiusD.isSelected()) {
+                    valorConv = fahrenheitParaCelsius(valor);
+                } else {
+                    valorConv = fahrenheitParaKelvin(valor);
+                }
+            }
+        }
+        String textoConv = String.valueOf(valorConv);
+        LConversao.setText(textoConv);
     }//GEN-LAST:event_sliOrigemMouseDragged
 
+    
     private void rbKelvinOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbKelvinOActionPerformed
         int valor = sliOrigem.getValue();
+        int maxAtual = sliOrigem.getMaximum();
+        int novoValor;
+        if (maxAtual == 100) { // Estava em Celsius
+            novoValor = celsiusParaKelvin(valor);
+            rbCelsiusD.setEnabled(true);
+            rbCelsiusD.setSelected(true);
+        } else { // Estava em Fahrenheit
+            novoValor = fahrenheitParaKelvin(valor);
+            rbFahrD.setEnabled(true);
+            rbFahrD.setSelected(true);
+        }
+        rbKelvinD.setEnabled(false);
         
-        valor =+ 273;
+        
+        // valor =+ 273;
+      
         
         sliOrigem.setMaximum(373);
         sliOrigem.setMinimum(273);
-        sliOrigem.setValue(valor);
+        sliOrigem.setValue(novoValor);
         
-        String texto = String.valueOf(valor);
+        String texto = String.valueOf(novoValor);
         LOrigem.setText(texto);
         
     }//GEN-LAST:event_rbKelvinOActionPerformed
+
+    private void rbCelsiusOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbCelsiusOActionPerformed
+        int valor = sliOrigem.getValue();
+        int maxAtual = sliOrigem.getMaximum();
+        int novoValor;
+        if (maxAtual == 373) { // Estava em Kelvin
+            novoValor = kelvinParaCelsius(valor);
+            rbKelvinD.setEnabled(true);
+            rbKelvinD.setSelected(true);
+        } else { // Estava em Fahrenheit
+            novoValor = fahrenheitParaCelsius(valor);
+            rbFahrD.setEnabled(true);
+            rbFahrD.setSelected(true);
+        }
+        rbCelsiusD.setEnabled(false);
+        
+        sliOrigem.setMaximum(100);
+        sliOrigem.setMinimum(0);
+        sliOrigem.setValue(novoValor);
+        
+        String texto = String.valueOf(novoValor);
+        LOrigem.setText(texto);
+    }//GEN-LAST:event_rbCelsiusOActionPerformed
+
+    private void rbFahrOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbFahrOActionPerformed
+        int valor = sliOrigem.getValue();
+        int maxAtual = sliOrigem.getMaximum();
+        int novoValor;
+        if (maxAtual == 100) { // Estava em Celsius
+            novoValor = celsiusParaFahrenheit(valor);
+            rbCelsiusD.setEnabled(true);
+            rbCelsiusD.setSelected(true);
+        } else { // Estava em Kelvin
+            novoValor = fahrenheitParaCelsius(valor);
+            rbKelvinD.setEnabled(true);
+            rbKelvinD.setSelected(true);
+        }
+        rbFahrD.setEnabled(false);
+        novoValor = 0;
+        sliOrigem.setMaximum(212);
+        sliOrigem.setMinimum(32);
+        sliOrigem.setValue(novoValor);
+        
+        String texto = String.valueOf(novoValor);
+        LOrigem.setText(texto);
+    }//GEN-LAST:event_rbFahrOActionPerformed
+
+    private void botReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botReiniciarActionPerformed
+        int valor = 0;
+        int maxAtual = sliOrigem.getMaximum();
+        int novoValor;
+        if (maxAtual == 373) { // Estava em Kelvin
+            novoValor = kelvinParaCelsius(valor);
+            rbKelvinD.setEnabled(true);
+            rbKelvinD.setSelected(true);
+        } else { // Estava em Fahrenheit
+            novoValor = fahrenheitParaCelsius(valor);
+            rbFahrD.setEnabled(true);
+            rbFahrD.setSelected(true);
+        }
+        rbCelsiusO.setSelected(true);
+        rbCelsiusD.setEnabled(false);
+        
+        sliOrigem.setMaximum(100);
+        sliOrigem.setMinimum(0);
+        
+
+        
+    }//GEN-LAST:event_botReiniciarActionPerformed
 
     /**
      * @param args the command line arguments

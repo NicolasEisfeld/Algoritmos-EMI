@@ -243,6 +243,9 @@
             <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" value="Celsius"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbCelsiusOActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rbKelvinO">
           <Properties>
@@ -268,6 +271,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Fahrenheit"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbFahrOActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -278,6 +284,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Reiniciar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botReiniciarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botSair">
       <Properties>
